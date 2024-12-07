@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <style>* Genel Stil */
+    <style>
+
+/* Temel sıfırlama ve stil ayarları */
 •⁠  ⁠{
     margin: 0;
     padding: 0;
@@ -10,91 +12,186 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #white;
-    color: #white
-
-;
+    background-color: #A0522D; /örnek kitapların bulunduğu konumun arka planı/
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.container {
-    width: 80%;
-    margin: 0 auto;
-}
-
+/* Header stil ayarları */
 header {
-    background-color: #BC8F8F;
-    padding: 20px 0;
+    background-color: #800000;
     color: white;
+    padding: 60px;
+    text-align: left;
+}
+.auth-buttons {
+    position: absolute;
+    top: 20px; /* Üstten 20px */
+    right: 20px; /* Soldan 20px */
+}
+.auth-buttons a:first-child {
+    background-color: #CD5C5C; /* Login butonu */
 }
 
-header .logo h1 {
-    font-size: 40px;
-    margin-left: -60px;
+.auth-buttons a:last-child {
+    background-color: #4CAF50; /* Signup butonu */
 }
+
+.auth-buttons a:hover {
+    opacity: 0.9; /* Hover'da hafif şeffaflık efekti */
+}
+
+
+
+/* Site ismi */
+.site-logo h1 {
+    margin: -50px;
+    font-size: 50px;
+	float: left;
+}
+
+/* Arama bölümü */
+.search-container {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.search-box {
+    padding: 10px;
+    width: 50%;
+    font-size: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.search-box:focus {
+    border-color: #0056b3;
+}
+
+/* Arama butonu */
+.search-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #CD5C5C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #004494;
+}
+
+.search-button:focus {
+    outline: none;
+}
+
+
+/Kategoriler kısmı/
 
 nav ul {
-    display: flex;
-    gap: 20px;
-    list-style: none;
-    margin-right: 10px;
+
+list-style-type: none;
+
+margin: 0;
+
+
+padding: 0;
+
+text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
 }
 
 nav ul li a {
     color: white;
-    font-size: 18px;
+
+text-decoration: none;
+
+padding: 10px 15px;
+    display: inline-block;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+
+background-color: #575757;
+
+border-radius: 5px;
 }
 
-/* Arama Bölümü */
-.search {
-    background-color: #white;
-    padding: 40px 0;
-    text-align: center;
+/* Dropdown menü için stil */
+.dropdown {
+
+position: relative;
+
+display: inline-block;
 }
 
-.search h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.search input {
-    padding: 10px;
-    font-size: 16px;
-    width: 250px;
-    margin-right: 10px;
-    border: 1px solid #ccc;
-}
-
-.search button {
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #2c3e50;
+.dropbtn {
+    background-color: #333;
     color: white;
-    border: none;
+    padding: 10px 15px;
+
+border: none;
+
+cursor: pointer;
+    font-size: 16px;
 }
 
-.search button:hover {
-    background-color: #34495e;
+.dropdown-content {
+    display: none;
+    position: absolute;
+
+background-color: #f1f1f1;
+
+min-width: 160px;
+
+box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+
+    z-z-index: 1;
 }
+
+.dropdown-content a {
+    color: black;
+
+padding: 12px 16px;
+
+text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+
+background-color: #ddd;
+}
+
+/* Dropdown menü açıldığında görünür */
+.dropdown:hover .dropdown-content {
+
+display: block;
+}
+
+.dropdown:hover .dropbtn {
+
+background-color: #575757;
+}
+
+
 
 /* Öne Çıkan Kitaplar Bölümü */
 .featured-books {
-    padding: 40px 0;
+    padding: 40px ;
     text-align: center;
 }
 
 .featured-books h2 {
     font-size: 28px;
     margin-bottom: 30px;
+	color: white;
 }
 
 .books-container {
@@ -126,7 +223,7 @@ nav ul li a:hover {
 
 .book .author {
     font-size: 14px;
-    color: #7f8c8d;
+    color: #black;
     margin-bottom: 10px;
 }
 
@@ -138,7 +235,7 @@ nav ul li a:hover {
 }
 
 .book .buy-btn {
-    background-color: #2ecc71;
+    background-color: #800000;
     color: white;
     border: none;
     padding: 10px;
@@ -152,45 +249,82 @@ nav ul li a:hover {
 
 /* Footer Bölümü */
 footer {
-    background-color: #2c3e50;
+    background-color: #800000;
     color: white;
-    padding: 20px 0;
+    padding: 20px;
     text-align: center;
-    margin-top: 40px;
-}</style>
+    margin-top: 80px;
+}
+
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kitap Satış Sitesi</title>
+    <title>Kitap Dünyası</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <!-- Header Bölümü -->
+    <!-- Header bölümü -->
     <header>
-        <div class="container">
-            <div class="logo">
-                <h1>Kitap Rüyası</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="#">Anasayfa</a></li>
-                    <li><a href="#">Kitaplar</a></li>
-                    <li><a href="#">Yazarlar</a></li>
-                    <li><a href="#">İletişim</a></li>
-                    <li><a href="#">Sepetim</a></li>
-                </ul>
-            </nav>
+
+
+
+        <div class="site-logo">
+            <h1>Kitap Dünyası</h1>
         </div>
+        <!-- Sağ üst köşedeki butonlar -->
+        <div class="auth-buttons">
+            <a href="{% url 'login' %}" class="login-btn">Login</a>
+            <a href="{% url 'singup' %}" class="singup-btn">Sing Up</a>
+        </div>
+
+        <div class="search-container">
+            <input type="text" placeholder="Arama yap..." class="search-box">
+            <button class="search-button">Ara</button>
+    <!-- kategoriler bölümü -->
+
+		</div>
+		<nav>
+<ul>
+
+<li><a href="#">Ana Sayfa</a></li>
+
+<li><a href="#">Hakkımızda</a></li>
+
+<li class="dropdown">
+
+<button class="dropbtn">Kategoriler</button>
+
+<div class="dropdown-content">
+
+<a href="#">Roman</a>
+
+<a href="#">Bilim Kurgu</a>
+
+<a href="#">Fantastik</a>
+
+<a href="#">Çocuk Kitapları</a>
+
+<a href="#">Klasikler</a>
+
+<a href="#">Biyografi</a>
+
+<a href="#">Şiir</a>
+
+<a href="#">Gezi Kitapları</a>
+
+</div>
+
+</li>
+
+</ul>
+
+</nav>
     </header>
 
-    <!-- Arama Bölümü -->
-    <section class="search">
-        <div class="container">
-            <h2>Kitap Ara</h2>
-            <input type="text" id="search-input" placeholder="Kitap adı veya yazar girin...">
-            <button id="search-btn">Ara</button>
-        </div>
-    </section>
+</body>
+</html>
+
 
     <!-- Öne Çıkan Kitaplar -->
     <section class="featured-books">
@@ -234,10 +368,7 @@ footer {
         </div>
     </footer>
 
-    <script src="scripts.js">
+    <script src="scripts.js"></script>
 
-    </script>
 </body>
 </html>
-
-
